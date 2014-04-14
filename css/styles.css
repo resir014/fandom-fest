@@ -208,13 +208,54 @@ a:hover {
 
 footer {
     margin-top: 3em;
-    padding: 2em 0;
-    border-top: 1px solid #ddd;
 }
 
 footer p {
     clear: left;
     margin: 0;
+}
+
+footer a,
+footer a:hover {
+    text-decoration: none;
+}
+
+footer .list-unstyled {
+    margin: 0;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 0;
+}
+
+/* Wrappers */
+.footer-link-wrapper {
+    padding: 1em 0;
+    background-color: #333;
+}
+
+.footer-link-wrapper a,
+.footer-link-wrapper a:hover {
+    color: #fff;
+}
+
+.footer-blah {
+    padding: 2em 0;
+    background-color: #eee;
+}
+
+@media (max-width: 768px) {
+    footer p {
+        text-align: center;
+    }
+
+    footer li {
+        text-align: center;
+    }
+
+    footer .pull-right {
+        float: none !important;
+    }
 }
 
 @media (min-width: 768px) {
