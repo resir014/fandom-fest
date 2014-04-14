@@ -97,6 +97,7 @@ a:hover {
  */
 
 .jumbotron-lg {
+    display: table;
     margin-bottom: 0;
     padding: 5em 15%;
     width: 100%;
@@ -106,16 +107,17 @@ a:hover {
     text-align: center;
 }
 
+/*
 .jumbotron-lg:before {
     content: '';
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    margin-right: -0.25em; 
 }
+*/
 
 .jumbotron-lg-content {
-    display: inline-block;
+    display: table-cell;
     vertical-align: middle;
 }
 
@@ -167,7 +169,7 @@ a:hover {
     .jumbotron-lg {
         padding: 5em 0;
     }
-    
+
     .jumbotron-lg p {
         font-size: 26px;
     }
