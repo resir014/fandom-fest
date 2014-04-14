@@ -1,0 +1,224 @@
+/*
+ * Styles for the FandomFest 2014 website.
+ *
+ * Copyright (c) 2014 Resi Respati.
+ * Licensed under the MIT License. See LICENSE for details.
+ *
+ */
+
+.browsehappy {
+    margin: .2em 0;
+    background: #ccc;
+    color: #000;
+    padding: .2em 0
+}
+
+/**
+ * Typography
+ */
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    height: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+p {
+    margin: 10px 0;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: color .20s;
+    -moz-transition: color .20s;
+    -o-transition: color .20s;
+    transition: color .20s;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/**
+ * Navbar
+ *
+ * Special wrapper for the navbar.
+ */
+
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+    padding-right: 0;
+    padding-left: 0;
+}
+.navbar-wrapper .navbar {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+
+    /* Navbar positioning foo */
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+    .navbar-wrapper .container {
+        padding-right: 15px;
+        padding-left:  15px;
+    }
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left:  0;
+    }
+
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 4px;
+    }
+}
+
+/**
+ * Jumbotron
+ *
+ * Modified Bootstrap jumbotron for page header.
+ */
+
+.jumbotron-lg {
+    margin-bottom: 0;
+    padding: 5em 15%;
+    width: 100%;
+    height: 570px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+}
+
+.jumbotron-lg:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; 
+}
+
+.jumbotron-lg-content {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.jumbotron-lg h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.jumbotron-lg p {
+    margin: 0;
+    font-weight: 300;
+    font-size: 19px;
+}
+
+.jumbotron-lg-links {
+    text-align: right;
+    margin-top: 40px;
+}
+
+.jumbotron-lg-links a,
+.jumbotron-lg-links a:hover{
+    color:#333;
+    text-decoration: none;
+}
+
+.jumbotron-lg-links ul {
+    margin: 0;
+    padding: 0;
+}
+
+.jumbotron-lg-links li {
+    display: inline;
+    padding: 10px 15px;
+    border-right: 1px solid #333;
+    /*margin-right: 12px;*/
+}
+
+.jumbotron-lg-links li:last-child {
+    border: 0;
+}
+
+/* Huge-ass logo */
+.jumbotron-lg img {
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+    .jumbotron-lg {
+        padding: 5em 0;
+    }
+    
+    .jumbotron-lg p {
+        font-size: 26px;
+    }
+}
+
+/**
+ * Homepage Content
+ */
+
+/* Featurette */
+
+.featurette {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.featurette-title {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.featurette-column {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.featurette-link-wrapper {
+    padding: 30px 0;
+}
+
+/**
+ * Footer
+ */
+
+footer {
+    margin-top: 3em;
+    padding: 2em 0;
+    border-top: 1px solid #ddd;
+}
+
+footer p {
+    clear: left;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    footer li {
+        float: left;
+        margin-right: 1.5em;
+        margin-bottom: 1.5em;
+    }
+}
