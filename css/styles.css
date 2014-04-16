@@ -295,11 +295,32 @@ a:hover {
  * Sidebar
  */
 
+/* By default it's not affixed in mobile views, so undo that */
 .sidebar-wrapper.affix {
-    position: fixed;
-    top: 20px;
+    position: static;
 }
 
-.sidebar-wrapper.affix-bottom {
-    position: absolute;
+.sidebar-wrapper.affix-bottom .nav,
+.sidebar-wrapper.affix .nav {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Show and affix the side nav when space allows it */
+@media (min-width: 992px) {
+    .sidebar-wrapper {
+        display: block;
+    }
+    .sidebar-wrapper.affix {
+        position: fixed; /* Undo the static from mobile first approach */
+        top: 20px;
+    }
+    .sidebar-wrapper.affix-bottom {
+        position: absolute; /* Undo the static from mobile first approach */
+    }
+    .sidebar-wrapper.affix-bottom .nav,
+    .sidebar-wrapper.affix .nav {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 }
