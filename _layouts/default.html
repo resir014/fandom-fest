@@ -31,13 +31,12 @@
             <p class="browsehappy">Hello, Internet Explorer 6 user. Microsoft has ended official support for your browser as per 8 April 2014. In fact, the entire internet has grown sick and tired of it and we won't bother tailoring our websites to meet your outdated standards as well. <a href="http://browsehappy.com/" target="_blank">Click here</a> to upgrade your browser.</p>
         <![endif]-->
 
-{% include navbar.html %}
-
-{{ content }}
-
-{% include footer.html %}
-
-{% include scripts.html %}
-
+        {% include navbar.html %}
+        {% if page.title %}
+        {% include page-header.html %}
+        {% endif %}
+        {{ content }}
+        {% include footer.html %}
+        {% include scripts.html %}
     </body>
 </html>
