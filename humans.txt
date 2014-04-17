@@ -6,7 +6,7 @@
 
 /* THANKS */
     Normalize: Nicolas Gallagher
-    Site: http://git.io/normalize
+    Site: http://necolas.github.io/normalize.css/
     
     Bootstrap: Twitter, Inc.
     Twitter: @TwBootstrap
@@ -17,6 +17,6 @@
     Site: https://github.com/South-Paw/HTML-Stovetop
 
 /* SITE */
-    Last update: 2014/04/15
+    Last update: 2014/04/17
     Doctype: HTML5
     IDE: Brackets, Sublime Text, GitHub
