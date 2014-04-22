@@ -336,6 +336,11 @@ a:hover {
     text-align: center;
 }
 
+address {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
 .contact a {
     color: #333;
     text-decoration: none;
