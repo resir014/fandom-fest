@@ -207,9 +207,14 @@ a:hover {
 }
 
 .featurette-title {
-    font-size: 40px;
     color: #333;
     margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+    .featurette-title {
+        font-size: 40px;
+    }
 }
 
 .featurette-column {
