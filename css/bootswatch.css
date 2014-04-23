@@ -272,7 +272,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+  font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   line-height: 1.42857143;
   color: #333333;
@@ -361,7 +361,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Open Sans", Calibri, Candara, Arial, sans-serif;
+  font-family: inherit;
   font-weight: 300;
   line-height: 1.1;
   color: inherit;
