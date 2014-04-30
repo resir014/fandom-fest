@@ -13,6 +13,12 @@ $(function () {
     randomSplash[7]     = "At what time do you think Thorin wakes up in the morning in order to braid his hair?";
     randomSplash[8]     = "*whispers* Hail HYDRA!";
     randomSplash[9]     = "Looking for hiatus buddy? We’re professionals.";
+    randomSplash[10]    = "When Albion is greatest, FandomFest shall rise again.";
+    randomSplash[11]    = "No rude people.";
+    randomSplash[12]    = "By the way, did we also mention that we travel in space and time?";
+    randomSplash[13]    = "Ship it. Ship it real good.";
+    randomSplash[14]    = "And now, the weather.";
+    randomSplash[15]    = "Let’s settle Rama/Ucok and Bejo/Ucok with Rama/Bejo/Ucok.";
 
     var generateRandomNumber = Math.floor(Math.random()*randomSplash.length);
 

@@ -17,6 +17,6 @@
     Site: https://github.com/South-Paw/HTML-Stovetop
 
 /* SITE */
-    Last update: 2014/04/17
+    Last update: 2014/04/30
     Doctype: HTML5
     IDE: Brackets, Sublime Text, GitHub
