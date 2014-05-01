@@ -8,6 +8,9 @@
 
 html, body {
     height: 100%;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.4);
 }
 
 .browsehappy {
@@ -152,6 +155,22 @@ a:hover {
     font-size: 19px;
 }
 
+/* Huge-ass logo */
+.jumbotron-lg img {
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+    .jumbotron-lg {
+        padding: 5em 0;
+    }
+
+    .jumbotron-lg p {
+        font-size: 26px;
+    }
+}
+
 .jumbotron-lg-links {
     text-align: right;
     margin-top: 40px;
@@ -177,26 +196,6 @@ a:hover {
 
 .jumbotron-lg-links li:last-child {
     border: 0;
-}
-
-/* Huge-ass logo */
-.jumbotron-lg img {
-    max-width: 100%;
-    margin: 20px 0;
-}
-
-.jumbotron-lg p {
-    font-weight: 200;
-}
-
-@media (min-width: 768px) {
-    .jumbotron-lg {
-        padding: 5em 0;
-    }
-
-    .jumbotron-lg p {
-        font-size: 26px;
-    }
 }
 
 /**
