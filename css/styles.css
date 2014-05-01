@@ -8,9 +8,9 @@
 
 html, body {
     height: 100%;
-    -webkit-font-smoothing: antialiased !important;
+    /*-webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-text-stroke: 0.3px;
+    -webkit-text-stroke: 0.3px;*/
 }
 
 .browsehappy {
