@@ -1,3 +1,23 @@
+//jQuery to collapse the navbar on scroll
+$(window).scroll(function() {
+    if ($(".navbar-intro").offset().top > 50) {
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+    } else {
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+    }
+});
+
+//jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+    $('.page-scroll a').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
+
 //Random tagline generator
 $(function () {
     var randomSplash = new Array();
@@ -25,15 +45,12 @@ $(function () {
     $('#randomSplash').html(randomSplash[generateRandomNumber]);
 });
 
-//Call the Scrollspy plugin
-$('body').scrollspy({ target: '.sidebar-wrapper' });
-
 //Call the Affix plugin
 $('.sidebar-wrapper').affix({
     offset: {
-      top: 100,
-      bottom: function () {
-        return (this.bottom = $('.footer').outerHeight(true))
-      }
+        top: 100,
+        bottom: function () {
+            return (this.bottom = $('.footer').outerHeight(true))
+        }
     }
-  });
+});

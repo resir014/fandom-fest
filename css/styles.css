@@ -7,17 +7,11 @@
  */
 
 html, body {
+    width: 100%;
     height: 100%;
     /*-webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-stroke: 0.3px;*/
-}
-
-.browsehappy {
-    margin: .2em 0;
-    background: #ccc;
-    color: #000;
-    padding: .2em 0
 }
 
 /**
@@ -36,8 +30,14 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-    font-weight: 300;
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 500;
     line-height: 1.2;
 }
 
@@ -54,10 +54,96 @@ a:hover {
 }
 
 /**
- * Navbar
+ * Column Alignments
  *
- * Special wrapper for the navbar.
+ * Weird hack for achieving same heights in a column.
+ * @see [http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height]
+ *
+
+* vertical alignment styles *
+.col-top {
+    vertical-align:top;
+}
+.col-middle {
+    vertical-align:middle;
+}
+.col-bottom {
+    vertical-align:bottom;
+}
+
+* columns of same height styles *
+.container-xs-height {
+    display:table;
+    padding-left:0px;
+    padding-right:0px;
+}
+.row-xs-height {
+    display:table-row;
+}
+.col-xs-height {
+    display:table-cell;
+    float:none;
+}
+@media (min-width: 768px) {
+    .container-sm-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-sm-height {
+        display:table-row;
+    }
+    .col-sm-height {
+        display:table-cell;
+        float:none;
+    }
+}
+@media (min-width: 992px) {
+    .container-md-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-md-height {
+        display:table-row;
+    }
+    .col-md-height {
+        display:table-cell;
+        float:none;
+    }
+}
+@media (min-width: 1200px) {
+    .container-lg-height {
+        display:table;
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .row-lg-height {
+        display:table-row;
+    }
+    .col-lg-height {
+        display:table-cell;
+        float:none;
+    }
+}
+*/
+
+@media (min-width: 768px) {
+    .col-equal {
+        height: 460px;
+    }
+
+    .col-equal > .well {
+        height: 100%;
+        position: relative;
+    }
+}
+
+/**
+ * Navbar
  */
+
+/* Navbar wrapper */
 
 .navbar-wrapper {
     position: absolute;
@@ -98,15 +184,83 @@ a:hover {
     }
 }
 
+.navbar-brand {
+    font-weight: 700;
+}
+
+.navbar-brand img {
+    height: 100%;
+}
+
+.navbar-brand:focus {
+    outline: 0;
+}
+
+.navbar-inverse a {
+    color: #fff;
+}
+
+.navbar-inverse .nav li a {
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.navbar-inverse .nav li a:hover,
+.navbar-inverse .nav li a:focus,
+.navbar-inverse .nav li.active {
+    outline: 0;
+    background-color: rgba(255,255,255,.2);
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: rgba(255,255,255,.2);
+}
+
+.navbar-intro,
+.navbar-default {
+    background-color: #007fff;
+    border-bottom: 1px solid #006ddb;
+}
+
+@media (min-width:768px) {
+    .navbar {
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .navbar-intro {
+        padding: 20px 0;
+        border-bottom: 0;
+        background: 0 0;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+        background-color: #007fff;
+    }
+
+    .navbar-inverse.top-nav-collapse {
+        border-bottom: 1px solid #006ddb;
+    }
+}
+
 /**
  * Jumbotron
  *
  * Modified Bootstrap jumbotron for page headers.
+ * @deprecated
  */
 
 .jumbotron {
     background-color: #333;
     color: #fff;
+    width: 100%;
+    height: 100%;
 }
 
 .jumbotron h1 {
@@ -121,122 +275,258 @@ a:hover {
     margin-top: 50px;
 }
 
-.jumbotron-lg {
+/**
+ * Intro
+ *
+ * Replaces Jumbotron.
+ */
+
+.intro {
     display: table;
-    margin-bottom: 0;
-    padding: 5em 15%;
     width: 100%;
-    height: 570px;
+    height: auto;
+    padding: 50px 0;
     text-align: center;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;*/
 }
 
-/*
-.jumbotron-lg:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+.intro:before {
+    content:"";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .4;
+    background: url(/img/assets/congruent_outline.png) repeat top left;
 }
-*/
 
-.jumbotron-lg-content {
+
+.intro-content {
     display: table-cell;
     vertical-align: middle;
+    height: 570px;
 }
 
-.jumbotron-lg h1 {
+@media (min-width:768px) {
+    .intro {
+        height: 100%;
+    }
+
+    .brand-heading {
+        font-size: 100px;
+    }
+
+    .intro-text {
+        font-size: 25px;
+    }
+}
+
+.intro-content h1 {
     margin: 0;
     font-size: 48px;
 }
 
-.jumbotron-lg p {
+.intro-content p {
     margin: 0;
     font-weight: 200;
-    font-size: 19px;
+    font-size: 16px;
 }
 
 /* Huge-ass logo */
-.jumbotron-lg img {
+.intro-content img {
     max-width: 100%;
     margin: 20px 0;
 }
 
 @media (min-width: 768px) {
-    .jumbotron-lg {
+    .intro-content {
         padding: 5em 0;
     }
 
-    .jumbotron-lg p {
-        font-size: 26px;
+    .intro-content p {
+        font-size: 20px;
     }
 }
 
-.jumbotron-lg-links {
+.intro-content-links {
     text-align: right;
     margin-top: 40px;
 }
 
-.jumbotron-lg-links a,
-.jumbotron-lg-links a:hover{
+.intro-content-links a,
+.intro-content-links a:hover{
     color:#333;
     text-decoration: none;
 }
 
-.jumbotron-lg-links ul {
+.intro-content-links ul {
     margin: 0;
     padding: 0;
 }
 
-.jumbotron-lg-links li {
+.intro-content-links li {
     display: inline;
     padding: 10px 15px;
     border-right: 1px solid #333;
     /*margin-right: 12px;*/
 }
 
-.jumbotron-lg-links li:last-child {
+.intro-content-links li:last-child {
     border: 0;
+}
+
+.intro-page-scroll {
+    position: absolute;
+    bottom: 0;
+    /* I don't know why but if I set this to 100% the horizontal scrollbars fucked up. */
+    width: 99.9%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* Circled buttons for page scroll element */
+
+.btn-circle {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    padding: 7px 16px;
+    border: 2px solid #fff;
+    border-radius: 35px;
+    font-size: 40px;
+    color: #fff;
+    background: 0 0;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.btn-circle:hover,
+.btn-circle:focus {
+    outline: 0;
+    color: #fff;
+    background: rgba(255,255,255,.1);
+}
+
+/**
+ * Horizontal divider
+ */
+
+hr {
+    margin: 2em auto;
+    max-width: 12em;
+    border: 0;
+    border-top: 1px solid #ddd;
+}
+
+.hr-block {
+    max-width: 100%;
 }
 
 /**
  * Homepage Content
  */
 
+/* Content */
+
+#content {
+    margin-top: 50px;
+}
+
 /* Featurette */
 
 .featurette {
     padding-top: 40px;
     padding-bottom: 40px;
+}
+
+.featurette-centered {
     text-align: center;
 }
 
 .featurette-title {
-    color: #333;
-    margin-bottom: 5px;
+    text-align: center;
+    font-size: 36px;
 }
 
-@media (min-width: 768px) {
-    .featurette-title {
-        font-size: 40px;
-    }
-}
-
-.featurette-column {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.featurette-column-title {
-    font-size: 24px;
+.featurette-sm {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .featurette-link-wrapper {
-    padding: 30px 0;
+    padding-top: 30px;
+}
+
+@media (min-width: 768px) {
+    .featurette {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .featurette-sm {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .featurette-title {
+        font-size: 48px;
+    }
+}
+
+/* Join us */
+
+.well .featurette-column-title {
+    margin-top: 0;
+}
+
+.well-btn {
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .well-btn {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+    }
+}
+
+/* Contact */
+
+#contact {
+    margin-top: 50px;
+    padding: 50px 0;
+    background-color: #262626;
+    color: #fff;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #eee;
+    margin: 0 5px;
+    padding: 2px 5px;
+    text-decoration: none;
 }
 
 /**
  * Footer
  */
+
+/* Default footer */
 
 #footer {
     margin-top: 3em;
@@ -303,6 +593,72 @@ a:hover {
     }
 }
 
+/* Homepage footer */
+
+#footer-intro {
+    margin-top: 0;
+    background-color: #262626;
+    color: #fff
+}
+
+#footer-intro p {
+    clear: left;
+    margin: 0;
+}
+
+#footer-intro hr {
+    margin: 0 auto;
+}
+
+#footer-intro a,
+#footer-intro a:hover {
+    text-decoration: none;
+}
+
+#footer-intro .list-unstyled {
+    margin: 0;
+}
+
+#footer-intro .list-unstyled li {
+    margin-bottom: 0;
+}
+
+/* Wrappers */
+.footer-intro-blah {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.footer-intro-blah a {
+    color: #bbb;
+}
+
+.footer-intro-blah img {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    #footer-intro p {
+        text-align: center;
+    }
+
+    #footer-intro li {
+        text-align: center;
+    }
+
+    #footer-intro .pull-right {
+        float: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    #footer-intro li {
+        float: left;
+        margin-right: 1.5em;
+        margin-bottom: 1.5em;
+    }
+}
+
 /**
  * Sidebar
  */
@@ -355,10 +711,16 @@ address {
     text-decoration: none;
 }
 
-.contact-twitter a:hover {
+.contact-twitter a:hover,
+a.contact-twitter:hover {
     color: #55acee;
 }
 
-.contact-facebook a:hover {
+.contact-facebook a:hover,
+a.contact-facebook:hover {
     color: #3b5998;
+}
+
+.email-wrapper {
+    font-size: 1.4em;
 }
