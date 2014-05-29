@@ -438,12 +438,6 @@ hr {
  * Homepage Content
  */
 
-/* Content */
-
-#content {
-    margin-top: 50px;
-}
-
 /* Featurette */
 
 .featurette {
@@ -721,6 +715,8 @@ a.contact-facebook:hover {
     color: #3b5998;
 }
 
-.email-wrapper {
-    font-size: 1.4em;
+@media (min-width: 768px) {
+    .email-wrapper {
+        font-size: 1.4em;
+    }
 }
