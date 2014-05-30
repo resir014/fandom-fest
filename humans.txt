@@ -7,16 +7,19 @@
 /* THANKS */
     Normalize: Nicolas Gallagher
     Site: http://necolas.github.io/normalize.css/
-    
+
     Bootstrap: Twitter, Inc.
     Twitter: @TwBootstrap
     Site: http://getbootstrap.com/
-    
+
     Stovetop: Alex "South Paw" Gabites
     Twitter: @SouthPawNZ
     Site: https://github.com/South-Paw/HTML-Stovetop
 
+    Subtle Patterns: Atle Mo
+    Site: http://subtlepatterns.com/
+
 /* SITE */
-    Last update: 2014/05/01
+    Last update: 2014/05/30
     Doctype: HTML5
-    IDE: Brackets, Sublime Text, GitHub
+    IDE: Brackets, Sublime Text, Jekyll, GitHub
