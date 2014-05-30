@@ -1,5 +1,6 @@
 <header class="container">
-    <div class="page-header">
-        <h1>{{ page.title }}{% if page.description %} <small class="hidden-xs">{{ page.description }}</small></h1>{% endif %}
-    </div>
+    <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li class="active">{{ page.title }}</li>
+    </ol>
 </header>
