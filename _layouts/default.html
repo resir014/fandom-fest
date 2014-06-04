@@ -4,7 +4,7 @@
         {% include html/head.html %}
     </head>
 
-    <body id="top">
+    <body id="top"{% if page.slug %} id="page-top" data-spy="scroll" data-target=".navbar-custom"{% endif %}>
 
         {% if page.slug == nil %}
         {% include home/navbar.html %}
