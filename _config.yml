@@ -1,4 +1,17 @@
+# Page details
 name:           FandomFest 2014
 description:    FandomFest is basically a summer festival of all your favorite TV/movie fandoms, so come on, turn your laptop off for a few hours and get out of the house for some fun with your fellow enthusiasts.
+author:         Resi Respati
+author_twitter: https://twitter.com/resir014
+author_email:   resir014@gmail.com
+description:    Resi Respati (@resir014). Student, gamer, blogger, and an aspiring web designer. Will design websites for food.
 
+
+# Permalinks
 permalink:      pretty
+
+# Server
+host:           0.0.0.0
+port:           4000
+url:            http://fandom-fest.com
+encoding:       UTF-8
