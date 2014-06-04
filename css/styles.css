@@ -56,81 +56,12 @@ a:hover {
 /**
  * Column Alignments
  *
- * Weird hack for achieving same heights in a column.
- * @see [http://www.minimit.com/articles/solutions-tutorials/bootstrap-3-responsive-columns-of-same-height]
- *
-
-* vertical alignment styles *
-.col-top {
-    vertical-align:top;
-}
-.col-middle {
-    vertical-align:middle;
-}
-.col-bottom {
-    vertical-align:bottom;
-}
-
-* columns of same height styles *
-.container-xs-height {
-    display:table;
-    padding-left:0px;
-    padding-right:0px;
-}
-.row-xs-height {
-    display:table-row;
-}
-.col-xs-height {
-    display:table-cell;
-    float:none;
-}
-@media (min-width: 768px) {
-    .container-sm-height {
-        display:table;
-        padding-left:0px;
-        padding-right:0px;
-    }
-    .row-sm-height {
-        display:table-row;
-    }
-    .col-sm-height {
-        display:table-cell;
-        float:none;
-    }
-}
-@media (min-width: 992px) {
-    .container-md-height {
-        display:table;
-        padding-left:0px;
-        padding-right:0px;
-    }
-    .row-md-height {
-        display:table-row;
-    }
-    .col-md-height {
-        display:table-cell;
-        float:none;
-    }
-}
-@media (min-width: 1200px) {
-    .container-lg-height {
-        display:table;
-        padding-left:0px;
-        padding-right:0px;
-    }
-    .row-lg-height {
-        display:table-row;
-    }
-    .col-lg-height {
-        display:table-cell;
-        float:none;
-    }
-}
-*/
+ * Extremely simple hack for achieving same heights in a column.
+ */
 
 @media (min-width: 768px) {
     .col-equal {
-        height: 460px;
+        height: 460px; /* unfortunately only static, probably could make it dynamic in the future */
     }
 
     .col-equal > .well {
@@ -291,10 +222,6 @@ a:hover {
     color: #fff;
     position: relative;
     z-index: 1;
-    /*-webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;*/
 }
 
 .intro:before {
