@@ -20,6 +20,6 @@
     Site: http://subtlepatterns.com/
 
 /* SITE */
-    Last update: 2014/06/04
+    Last update: 2014/06/05
     Doctype: HTML5
     IDE: Brackets, Sublime Text, Jekyll, GitHub
