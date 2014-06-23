@@ -322,6 +322,12 @@ a:hover {
     text-align: center;
 }
 
+/* Announcement */
+
+.announcement a {
+    color: #fff;
+}
+
 /* Circled buttons for page scroll element */
 
 .btn-circle {
