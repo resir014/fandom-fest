@@ -15,5 +15,5 @@ baseurl:        "/fandom-fest"
 # Server
 host:           0.0.0.0
 port:           4000
-url:            http://fandom-fest.com
+url:            http://resir014.github.io
 encoding:       UTF-8
